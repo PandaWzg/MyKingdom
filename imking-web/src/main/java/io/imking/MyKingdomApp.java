@@ -17,15 +17,16 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @SpringBootApplication(scanBasePackages = "io.imking")
 // @EnableRedisHttpSession(maxInactiveIntervalInSeconds = 5 * 60)
-@MapperScan({"io.imking.biz.mapping", "io.imking.common.mapping","io.imking.reward.mapping"})
+@MapperScan({ "io.imking.biz.mapping", "io.imking.common.mapping", "io.imking.reward.mapping" })
 @EnableTransactionManagement
 public class MyKingdomApp {
 	public static void main(String[] args) {
 		SpringApplication.run(MyKingdomApp.class, args);
 	}
+
 	@PostConstruct
 	@Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+	public BCryptPasswordEncoder bCryptPasswordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 }
