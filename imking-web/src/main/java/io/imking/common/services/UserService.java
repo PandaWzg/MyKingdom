@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import io.imking.common.beans.dto.ImkUserDTO;
 import io.imking.common.domain.ImkUser;
 import io.imking.common.mapping.ImkUserMapper;
-import io.imking.utils.Result;
 
 /**
  * @author bigbomb
