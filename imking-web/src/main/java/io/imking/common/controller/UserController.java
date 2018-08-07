@@ -1,7 +1,5 @@
 package io.imking.common.controller;
 
-import io.imking.common.services.MailService;
-import io.imking.utils.GenRandom;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,7 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.imking.common.beans.dto.ImkUserDTO;
 import io.imking.common.domain.ImkUser;
+import io.imking.common.services.MailService;
 import io.imking.common.services.UserService;
+import io.imking.utils.GenRandom;
 import io.imking.utils.Result;
 import io.imking.utils.ResultEnum;
 
@@ -38,8 +38,8 @@ public class UserController {
 	 }
 	 //用户注册
 	 @PostMapping("/signup")
-	    public Result signUp(@RequestBody ImkUser user) {
-		 	Result result = new Result();
+	    public Result<String> signUp(@RequestBody ImkUser user) {
+		 	Result<String> result = new Result<>();
 	        user.setPwd(bCryptPasswordEncoder.encode(user.getPwd()));
 	        try
 	        {
@@ -65,9 +65,9 @@ public class UserController {
 	 * @author zhanyingda
 	 */
 	@PostMapping("/findPassward")
-	public Result findPassward(Integer id) {
+	public Result<String> findPassward(Integer id) {
 	 	//TODO 验证验证码
-		Result result = new Result();
+		Result<String> result = new Result<>();
 		try{
 			//获取邮箱
 			ImkUserDTO userDTO = userService.getUserInfo(id);
