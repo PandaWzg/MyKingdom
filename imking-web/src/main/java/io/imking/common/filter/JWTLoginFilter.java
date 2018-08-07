@@ -67,7 +67,7 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
 			Authentication auth) {
 		 Collection<? extends GrantedAuthority> authorities = auth.getAuthorities();
          // 定义存放角色集合的对象
-         List roleList = new ArrayList<>();
+         List<String> roleList = new ArrayList<>();
          for (GrantedAuthority grantedAuthority : authorities) {
              roleList.add(grantedAuthority.getAuthority());
          }
