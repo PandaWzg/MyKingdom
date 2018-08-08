@@ -6,6 +6,8 @@ COPY mykingdom-imking.jar /app/mykingdom-imking.jar
 
 COPY start.sh /app/start.sh
 
+COPY application.yml /app/application.yml
+
 RUN chmod +x /app/start.sh
 
 ENV JAVA_OPTS=""
