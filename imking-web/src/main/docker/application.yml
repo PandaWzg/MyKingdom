@@ -1,0 +1,70 @@
+spring:
+  application:
+    name: mykingdom-imking
+  datasource:
+    url: jdbc:mysql://192.168.0.151:3389/imking?useSSL=false&useUnicode=true&characterEncoding=UTF8
+#   url: jdbc:mysql://localhost:3306/imking?useSSL=false&useUnicode=true&characterEncoding=UTF8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: imking
+    password: 46OMuh4j
+#    username: root
+#    password: admin
+    druid:
+      initial-size: 10
+      max-active: 20
+      min-idle: 10
+      max-wait: 10
+    schema: classpath:create-db.sql
+    data: classpath:demo-data.sql
+    initialize: true
+    continue-on-error: true
+  mail:
+    host: smtp.qq.com
+    username: 2358161305@qq.com
+    password: rbuwnoipjgfrebjd
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+#  redis:
+#    host: 192.168.0.3
+#    port: 6379
+#    password:
+  upload:
+    path: /data/mydata
+  jackson:
+    time-zone: GMT+8
+
+server:
+  port: 5001
+  context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+
+pagehelper:
+   helperDialect: mysql
+   reasonable: true
+   supportMethodsArguments: true
+   params: count=countByExample
+
+logging:
+  #config: classpath:log4j2.xml
+#输出sql到日志
+  level:
+    io.imking.biz.mapping:debug
+    io.imking.common.mapping:debug
+    io.imking.reward.mapping:debug
+mybatis:
+  configuration:
+    cache-enabled: false
+    aggressive-lazy-loading: false
+    use-generated-keys: false
+    auto-mapping-behavior: partial
+    default-executor-type: reuse
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: null
+    local-cache-scope: statement
+#  type-handlers-package:
