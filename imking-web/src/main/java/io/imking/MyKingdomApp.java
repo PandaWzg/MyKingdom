@@ -1,5 +1,7 @@
 package io.imking;
 
+import java.util.TimeZone;
+
 import javax.annotation.PostConstruct;
 
 import org.mybatis.spring.annotation.MapperScan;
@@ -24,6 +26,11 @@ public class MyKingdomApp {
 		SpringApplication.run(MyKingdomApp.class, args);
 	}
 
+	@PostConstruct
+	void started() {
+		TimeZone.setDefault(TimeZone.getTimeZone("GMT+8"));
+	}
+	
 	@PostConstruct
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {

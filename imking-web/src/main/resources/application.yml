@@ -39,7 +39,7 @@ spring:
     time-zone: GMT+8
 
 server:
-  port: 8080
+  port: 5001
   context-path: /
   tomcat:
     uri-encoding: UTF-8
