@@ -34,7 +34,7 @@
     }
     window.$_ajax = $_ajax;
     
-    $(".header").load("/tmp/common/header.html");
+    $(".header").load("/biz/header.html");
 })(window,jQuery);
 (function ($,global) {
     'use strict';
