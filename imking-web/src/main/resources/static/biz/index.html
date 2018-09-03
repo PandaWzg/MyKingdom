@@ -1,97 +1,138 @@
+<!DOCTYPE html>
+<html>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Mycat-营销页面</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/biz/assets/lib/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/biz/assets/lib/css/saas.css">
-  </head>
-  <body>
-  	<div class="header"></div>
-  	<div class="wf-bg"></div>
-   	<div class="wf">
-   		<div class="container">
-   			<div class="row">
-	   			<div class="col-xs-12 col-md-6 col-lg-6">
-	   				<p class="theme-title">
-	   					花园式环境共享办公
-	   				</p>
-	   			</div>
-	   			<div class="col-xs-12 col-md-6 col-lg-6 text-center">
-	   				<div class="formbox">
-		   				<div class="form" id="subscribeDiv">
-		   					<div class="text-left inner">
-		   						<p class="mtitle">选择您的服务</p>
-		   						<ul id="biz">
-									
-								</ul>
-		   						<div class="wf" style="margin-top: 40px;">
-		   							<div class="wf" style="line-height: 30px;">姓名</div>
-		   							<input type="text" name="name" placeholder="请填写您的姓名" class="form-control" style="border-width:0 0 1px 0 ;" />
-		   						</div>
-		   						<div class="wf" style="margin-top: 20px;">
-		   							<div class="wf" style="line-height: 30px;">联系方式</div>
-		   							<input type="text" name="phone" placeholder="请留下您的手机号" class="form-control" style="border-width:0 0 1px 0 ;" />
-		   						</div>
-		   						<div class="wf" style="margin-top: 20px;">
-		   							<div class="wf" style="line-height: 30px;">邮箱地址</div>
-		   							<input type="text" name="email" placeholder="请填写您的邮箱地址" class="form-control" style="border-width:0 0 1px 0 ;" />
-		   						</div>
-		   						<div class="wf" style="margin-top: 50px;">
-		   							<button class="btn btn-default" id="subscribe" style="width: 100%;height: 50px;background: #333;color: #fff;cursor: pointer;font-weight: bold;">立即预约</button>
-		   						</div>
-		   					</div>
-		   				</div>
-		   				
-		   				<div class="form" id="sureDiv" style="display:none;">
-		   					<div class="text-left inner">
-		   						<p class="mtitle">选择您的服务</p>
-		   						<span id="phoneMsg">您用  号码成功预约</span>
-		   					    
-								<p class="stitle needhide" style="margin-top:30px;">选择您方便接听电话的时间</p>
-								<ul id="times" class="needhide">
-									<li  style="width:100%;"> <label><input class="confirmbox" value="上午" type="checkbox" />上午</label> </li>
-									<li  style="width:100%;"> <label><input class="confirmbox" value="中午" type="checkbox" />中午</label> </li>
-									<li  style="width:100%;"> <label><input class="confirmbox" value="下午" type="checkbox" />下午</label> </li>
-									<li  style="width:100%;"> <label><input class="confirmbox" value="晚上18:00-20:00" type="checkbox" />晚上18:00-20:00</label> </li>
-								</ul>
-								
-								<div class="wf needhide" style="margin-top:150px;">
-		   							<button class="btn btn-default" id="confirm" style="width: 100%;height: 50px;background: #333;color: #fff;cursor: pointer;font-weight: bold;">确定</button>
-		   						</div>
-							</div>
-		   				</div>
-	   				</div>
-	   			</div>
-	   		</div>
-	   		
-	   		<div class="row">
-	   			<div class="col-xs-12 col-md-6 col-lg-6">
-	   				<p class="brief-title">
-		   				欢迎来到 Im King共享办公空间
-		   			</p>
-		   			<p>
-		   				我们致力于构建花园式办公空间，助力不同公司共同成长。这里不仅是绝佳的工作、思考的场所，</br>
-		   				更是向全新生活的一种转变。
-		   			</p>
-	   			</div>
-	   		</div>
-   		</div>
-   	</div>
-	<footer class="mk-footer" >
-           <div class="footer-container"> 
-               <div class="container">
-                <ul class="row  align-items-center text-center">
-                    <li>©<a target="_blank" href="http://www.miitbeian.gov.cn/">鄂ICP备17029590号-1</a> </li>
-                </ul>
-            </div>
-    </footer>
-  </body>
-  <script src="/biz/assets/lib/js/jquery-3.2.1.min.js"></script>
-  <script src="/biz/assets/lib/js/tether.min.js"></script>
-  <script src="/biz/assets/lib/js/bootstrap.min.js"></script>
-  <script src="/biz/assets/lib/js/mk-main.js"></script>
-  <script src="/biz/assets/lib/js/index.js"></script>
-</html> 
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="/biz/assets/lib/css/page_index.min.css" />
+		<link rel="stylesheet" type="text/css" href="/biz/assets/lib/css/bootstrap.min.css" />
+		<title>imking</title>
+	</head>
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="logo float-left">
+						<img src="/biz/assets/lib/img/imking_logo.png" height="55px" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<div class="container">
+				<ul class="biz">
+					<li>
+						<input type="checkbox" class="bizbox" value="1" id="check1" />
+						<label for="check1">
+									公司注册
+								</label>
+					</li>
+					<li>
+						<input type="checkbox" class="bizbox" value="2" id="check2" />
+						<label for="check2">
+									总经理秘书
+								</label>
+					</li>
+					<li>
+						<input type="checkbox" class="bizbox" value="2" id="check3" />
+						<label for="check3">
+									商务合同
+								</label>
+					</li>
+					<li>
+						<input type="checkbox" class="bizbox" value="4" id="check4" />
+						<label for="check4">
+									软件人才培训
+								</label>
+					</li>
+					<li>
+						<input type="checkbox" class="bizbox" value="5" id="check5" />
+						<label for="check5">
+									销售和市场推广服务
+								</label>
+					</li>
+					<li>
+						<input type="checkbox" class="bizbox" value="6" id="check6" />
+						<label for="check6">
+									共享工位
+								</label>
+					</li>
+
+					<li>
+						<input type="checkbox" class="bizbox" value="7" id="check7" />
+						<label for="check7">
+									财务管理
+								</label>
+					</li>
+					<li>
+						<input type="checkbox" class="bizbox" value="8" id="check8" />
+						<label for="check8">
+									人力资源服务
+								</label>
+					</li>
+					<li>
+						<input type="checkbox" class="bizbox" value="9" id="check9" />
+						<label for="check9">
+									互联网产品众包研发
+								</label>
+					</li>
+				</ul>
+				<div class="mid-btn">
+					<span id="sp1" class="span">
+						返
+					</span>
+					<span id="sp2" class="span">
+						回
+					</span>
+					<span id="sp3" class="span">
+						首
+					</span>
+					<span id="sp4" class="span">
+						页
+					</span>
+					<a href="#" class="back" id='back_btn'></a>
+				</div>
+				<div class="form">
+					<div class="input-group w">
+						<div class="input_header">
+							姓名 
+						</div>
+						<input type="text" class="form-control-static my_input" placeholder="请填写您的姓名" name="name" id="name"/>
+					</div>
+					
+					<div class="input-group w">
+						<div class="input_header">
+							联系方式 
+						</div>
+						<input type="tel" class="form-control-static my_input" placeholder="请留下您的手机号" name="tel" id="tel"/>
+					</div>
+					
+					<div class="input-group w">
+						<div class="input_header">
+							邮箱地址 
+						</div>
+						<input type="email" class="form-control-static my_input" placeholder="请填写您的邮箱地址" name="email" id="email"/>
+					</div>
+					
+					<div class="input-group w">
+						<div class="input_header">
+							验证码 
+						</div>
+						<input type="text" class="form-control-static my_input code_input" name="verify" id="verify"/>
+						<div id="v_container" class="code_img">
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: 50px;">
+					<button class="btn center-block" id="subscribe" style="text-align:center;width: 30%;margin-bottom: 8rem;height: 40px;font:16px/1 '微软雅黑';background: #02307D;color: #DEF5F7;">立即预约</button>
+				</div>
+			</div>
+		</div>
+		<script src="/biz/assets/lib/js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/biz/assets/lib/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/biz/assets/lib/js/gVerify.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/biz/assets/lib/js/page_index.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

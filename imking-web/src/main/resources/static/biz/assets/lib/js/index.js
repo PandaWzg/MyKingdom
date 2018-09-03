@@ -9,7 +9,7 @@ $(function(){
 			var row = data[x] ;
 			html += '<li><label><input class="bizbox" type="checkbox" value="' + row.id +  '"/>' + row.businessName + '</label></li>' ; 
 		} 
-		$("#biz").html( html );
+		$(".biz").html( html );
 	}})
 	
 	$("#subscribe").click(function(){
