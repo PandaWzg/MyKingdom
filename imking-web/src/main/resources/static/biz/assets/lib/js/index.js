@@ -5,9 +5,9 @@ $(function(){
 	$_ajax.post({url:"/api/biz/loadAll" , callBack:function(json){
 		var data = json.data;
 		var html="";
-		for(var x=0;x<data.length;x++){
+		for(var x=0;x<data.length;x++){ 
 			var row = data[x] ;
-			html += '<li><input class="bizbox" id="check'+(x+1)+'" type="checkbox" value="' + row.id +  '"/><label for="check'+(x+1)+'>' + row.businessName + '</label></li>' ; 
+			html += '<li><input class="bizbox" id="check'+(x+1)+'" type="checkbox" value="' + row.id +  '"/><label for="check'+(x+1)+'">' + row.businessName + '</label></li>' ; 
 		}
 		$(".biz").html( html ); 
 	}})
