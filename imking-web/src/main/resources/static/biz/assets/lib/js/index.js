@@ -42,7 +42,7 @@ $(function(){
 		$_ajax.post({url:"/api/biz/subscribe" ,data:{custName:name,phone:phone,bizid:bizid} , callBack:function(json){
 			//alert(json.data);
 			isSubscribe=false;
-			alert("您用 "+phone+" 号码成功预约");
+			alert("您用 "+phone+" 号码成功预约，我们会尽快联系您");
 			custInfoId = json.data ;
 			$("#subscribeDiv").hide();
 			$("#sureDiv").show();
