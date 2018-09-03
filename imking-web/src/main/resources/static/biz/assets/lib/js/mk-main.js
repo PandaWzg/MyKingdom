@@ -33,8 +33,6 @@
         }
     }
     window.$_ajax = $_ajax;
-    
-    $(".header").load("/biz/header.html");
 })(window,jQuery);
 (function ($,global) {
     'use strict';

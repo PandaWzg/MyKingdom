@@ -7,9 +7,9 @@ $(function(){
 		var html="";
 		for(var x=0;x<data.length;x++){
 			var row = data[x] ;
-			html += '<li><label><input class="bizbox" type="checkbox" value="' + row.id +  '"/>' + row.businessName + '</label></li>' ; 
-		} 
-		$(".biz").html( html );
+			html += '<li><input class="bizbox" id="check'+(x+1)+'" type="checkbox" value="' + row.id +  '"/><label for="check'+(x+1)+'>' + row.businessName + '</label></li>' ; 
+		}
+		$(".biz").html( html ); 
 	}})
 	
 	$("#subscribe").click(function(){
